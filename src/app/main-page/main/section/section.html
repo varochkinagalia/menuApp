@@ -1,0 +1,13 @@
+<div class = "section">
+    <span class = "section__title">{{ this.section() }}</span>
+
+    <div class = "section__options">
+        @for (dish of this.dishes(); track dish.id) {
+            <div class = "section__option">
+                <div class = "section__option-name">{{ dish.name }}</div>
+                <div class = "section__option-price">{{ dish.price }} р.</div>
+                <input type="checkbox" class = "section__option-check" [checked] = "dish.selected" (change) = "change(dish.id)">
+            </div>
+        }
+    </div>
+</div>

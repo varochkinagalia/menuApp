@@ -1,0 +1,49 @@
+.welcome { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    row-gap: 50px;
+
+    border-radius: var(--border-radius);
+    background-color: var(--primary-color);
+    padding: 50px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.welcome__title {
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.welcome__button {
+    background-color: var(--text-color);
+    color: var(--primary-color);
+    border-radius: var(--border-radius);
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    border: none;
+    padding: 15px 40px;
+    cursor: pointer;
+}
+
+.welcome__button:hover {
+    background-color: var(--hover-color);
+}
+
+.welcome__button:focus-visible {
+    outline: 2px solid var(--focus-visible-color);
+    outline-offset: 2px;
+    background-color: var(--hover-color);
+}
+
+.welcome__button:active {
+    background-color: var(--active-color);
+}
+
+@media (max-width: 400px) {
+    .welcome {
+        padding: 30px;
+    }
+}
